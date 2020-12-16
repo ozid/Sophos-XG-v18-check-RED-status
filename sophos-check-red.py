@@ -7,6 +7,7 @@ import re
 sophos_host = sys.argv[1]
 
 ssh = SSHClient()
+ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 ssh.load_system_host_keys()
 
 
